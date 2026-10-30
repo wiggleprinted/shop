@@ -13,10 +13,10 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
-  # Allow Decap CMS to load from CDN
+  # Allow Decap CMS to load from CDN and handle image uploads
   for = "/admin/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com https://netlify-cdp-proxy.netlify.app data: blob:; img-src 'self' data: blob: https:; connect-src 'self' https://api.netlify.com https://identity.netlify.com https://netlify-cdp-proxy.netlify.app;"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com https://netlify-cdp-proxy.netlify.app data: blob:; img-src 'self' data: blob: https:; connect-src 'self' blob: https://unpkg.com https://api.netlify.com https://identity.netlify.com https://netlify-cdp-proxy.netlify.app https://api.github.com;"
 
 [[redirects]]
   # Ensure SPA-style admin routing works
