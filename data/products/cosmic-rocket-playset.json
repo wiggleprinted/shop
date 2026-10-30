@@ -1,0 +1,12 @@
+{
+  "title": "Cosmic Rocket Playset",
+  "price": 34.99,
+  "slug": "cosmic-rocket-playset",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["New"],
+  "category": "Space Heroes",
+  "specs": { "age": "6+", "pieces": 42 },
+  "description": "Blast off into imagination with our precision 3D-printed rocket set. Features detachable fuel boosters, opening crew hatch, and a detailed cockpit interior. Printed in eco-friendly PLA filament.",
+  "checkout_link": "product.html"
+}

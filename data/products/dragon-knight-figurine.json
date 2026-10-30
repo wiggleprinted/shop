@@ -1,0 +1,12 @@
+{
+  "title": "Dragon Knight Figurine",
+  "price": 24.99,
+  "slug": "dragon-knight-figurine",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["Best Seller"],
+  "category": "Fantasy Knights",
+  "specs": { "age": "8+", "pieces": 18 },
+  "description": "A majestic 3D-printed Dragon Knight with articulated arms and removable armour plating. Hand-finished with premium paint detailing on request.",
+  "checkout_link": "product.html"
+}

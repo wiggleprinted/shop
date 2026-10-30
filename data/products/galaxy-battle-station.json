@@ -1,0 +1,12 @@
+{
+  "title": "Galaxy Battle Station",
+  "price": 59.99,
+  "slug": "galaxy-battle-station",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["New", "Best Seller"],
+  "category": "Space Heroes",
+  "specs": { "age": "8+", "pieces": 215 },
+  "description": "The ultimate space command centre. Features docking bays, a command bridge, and fighter launch tubes. Compatible with all WigglePrinted Space Heroes figures.",
+  "checkout_link": "product.html"
+}

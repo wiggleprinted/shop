@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Output product entries as JSON files in data/products/
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "data/products"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "title"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number", value_type: "float", step: 0.01 }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly identifier, e.g. cosmic-rocket-playset" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - label: "Additional Images (Gallery)"
+        name: "gallery"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Badges"
+        name: "badges"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - { label: "New", value: "New" }
+          - { label: "Sale", value: "Sale" }
+          - { label: "Best Seller", value: "Best Seller" }
+          - { label: "Limited", value: "Limited" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Action Figures"
+          - "Puzzles & Games"
+          - "Vehicles"
+          - "Building Sets"
+          - "Educational"
+          - "STEM Builders"
+          - "Miniatures"
+          - "Space Heroes"
+          - "Fantasy Knights"
+          - "Speed Machines"
+      - label: "Specs"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Minimum Age", name: "age", widget: "string", hint: "e.g. 6+" }
+          - { label: "Number of Pieces", name: "pieces", widget: "number", value_type: "int" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Checkout Link", name: "checkout_link", widget: "string", default: "product.html", hint: "URL or relative path for the product detail page" }

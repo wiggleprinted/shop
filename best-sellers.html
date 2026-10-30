@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Sellers — WigglePrinted</title>
+  <meta name="description" content="Explore our top-selling 3D-printed toys. Backed by thousands of maker reviews and crafted with 100% eco-friendly PLA.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas:   '#0F172A',
+            surface:  '#1E293B',
+            offwhite: '#F8FAFC',
+            muted:    '#94A3B8',
+            cyan:     '#06B6D4',
+            coral:    '#F43F5E',
+            mint:     '#10B981',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .scrollbar-hide { scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+    .mega-menu { display: none; }
+    .group:hover .mega-menu, .mega-menu:hover { display: flex; }
+
+    .simple-dropdown { display: none; }
+    .nav-item:hover .simple-dropdown, .simple-dropdown:hover { display: block; }
+  </style>
+</head>
+<body class="bg-[#0F172A] font-sans text-[#F8FAFC] antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-[#1E293B] border-b border-white/5 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0 group">
+          <img src="assets/images/logo.jpg" alt="WigglePrinted Logo" class="w-10 h-10 rounded-full object-cover border border-[#06B6D4]/30 shadow-md group-hover:scale-105 transition-transform">
+          <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC]">
+            Wiggle<span class="text-[#06B6D4]">Printed</span>
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <!-- Shop Mega Menu -->
+          <div class="group relative py-2">
+            <a href="category.html" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[#94A3B8] hover:text-[#06B6D4] transition-colors rounded-lg hover:bg-white/5">
+              Shop
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+
+            <div class="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[640px] z-50">
+              <div class="rounded-2xl bg-[#1E293B] border border-white/10 shadow-2xl overflow-hidden flex">
+                <div class="w-56 py-4 border-r border-white/5 flex flex-col bg-[#1E293B]">
+                  <p class="px-4 mb-2 text-[10px] font-bold tracking-widest text-[#94A3B8] uppercase">Categories</p>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Action Figures</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Puzzles &amp; Games</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Vehicles</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Building Sets</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Educational</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Miniatures</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="gift-sets.html" class="flex items-center justify-between px-4 py-2 text-sm font-semibold text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link mt-auto border-t border-white/5">
+                    <span>🎁 Gift Sets</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+
+                <div class="flex-1 bg-[#0F172A] p-5 flex flex-col">
+                  <p class="mb-4 text-[10px] font-bold tracking-widest text-[#94A3B8] uppercase">Featured Collections</p>
+                  <div class="grid grid-cols-3 gap-3 flex-1">
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#06B6D4]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1M4.22 4.22l.707.707M18.364 18.364l.707.707M1 12h1m20 0h1M4.22 19.778l.707-.707M18.364 5.636l.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#06B6D4] transition-colors text-center">Space Heroes</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#F43F5E]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#F43F5E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#F43F5E] transition-colors text-center">Fantasy Knights</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#10B981]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#10B981] transition-colors text-center">Articulated</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#94A3B8]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#F8FAFC] transition-colors text-center">Speed Machines</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#06B6D4]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#06B6D4] transition-colors text-center">World Sets</span>
+                    </a>
+                    <a href="gift-sets.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#F43F5E]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#F43F5E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#F43F5E] transition-colors text-center">Gift Sets</span>
+                    </a>
+                  </div>
+
+                  <div class="mt-4 pt-4 border-t border-white/5 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-[#10B981] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-xs text-[#94A3B8]">Free shipping on orders over <span class="text-[#F8FAFC] font-semibold">$50</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discover -->
+          <div class="nav-item relative py-2">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[#06B6D4] transition-colors rounded-lg hover:bg-white/5">
+              Discover
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="simple-dropdown absolute top-full left-0 pt-2 w-48 z-50">
+              <div class="rounded-xl bg-[#1E293B] border border-white/10 shadow-xl py-2">
+                <a href="new-arrivals.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">New Arrivals</a>
+                <a href="best-sellers.html" class="block px-4 py-2 text-sm text-[#06B6D4] font-semibold bg-white/5 transition-colors">Best Sellers</a>
+                <a href="gift-sets.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">Gift Sets</a>
+                <div class="border-t border-white/5 my-1"></div>
+                <a href="about.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors">About Us</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Help -->
+          <div class="nav-item relative py-2">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[#94A3B8] hover:text-[#F8FAFC] transition-colors rounded-lg hover:bg-white/5">
+              Help
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="simple-dropdown absolute top-full left-0 pt-2 w-52 z-50">
+              <div class="rounded-xl bg-[#1E293B] border border-white/10 shadow-xl py-2">
+                <a href="returns.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">Returns &amp; Exchange</a>
+                <a href="contact.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Icons -->
+        <div class="flex items-center gap-1.5">
+          <a href="contact.html" class="p-2 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors" aria-label="Support">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </a>
+          <button class="relative p-2 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors" aria-label="Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cart-count absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#F43F5E] text-[#F8FAFC] text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors" aria-label="Menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/5 bg-[#1E293B]">
+      <div class="px-4 py-4 space-y-3">
+        <div class="space-y-1">
+          <a href="category.html" class="block px-3 py-2 text-sm font-semibold text-[#06B6D4] bg-white/5 rounded-lg">Shop All Toys</a>
+          <a href="new-arrivals.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">New Arrivals</a>
+          <a href="best-sellers.html" class="block px-3 py-2 text-sm text-[#06B6D4] font-semibold bg-white/5 rounded-lg">Best Sellers</a>
+          <a href="gift-sets.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">Gift Sets</a>
+          <a href="about.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">About Us</a>
+          <a href="returns.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">Returns &amp; Exchange</a>
+          <a href="contact.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 w-full">
+      <nav class="flex items-center gap-2 text-xs sm:text-sm text-[#94A3B8] mb-4">
+        <a href="index.html" class="hover:text-[#06B6D4] transition-colors">Home</a>
+        <svg class="w-3.5 h-3.5 text-[#94A3B8]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span class="text-[#F8FAFC] font-medium">Best Sellers</span>
+      </nav>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-white/5">
+        <div>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#10B981]/10 border border-[#10B981]/30 text-xs font-semibold text-[#10B981] mb-2">
+            ⭐ 4.9/5 Average Rating · Over 10,000 Happy Builders
+          </span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] tracking-tight">Best Sellers</h1>
+          <p class="text-sm text-[#94A3B8] mt-1.5">
+            Our most requested and loved 3D-printed toys, rigorously tested for endless play.
+          </p>
+        </div>
+        <div class="text-xs text-[#06B6D4] font-semibold bg-[#1E293B] px-4 py-2 rounded-xl border border-white/5">
+          Top Rated Models
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Dragon Knight -->
+        <div class="bg-[#1E293B] rounded-2xl border border-white/5 overflow-hidden shadow-lg flex flex-col group hover:border-[#F43F5E]/40 transition-colors">
+          <div class="relative h-60 bg-[#0F172A] flex items-center justify-center p-6 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#F43F5E] text-[#F8FAFC] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10">#1 BEST SELLER</span>
+            <button class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-[#1E293B]/80 text-[#94A3B8] hover:text-[#F43F5E] flex items-center justify-center transition-colors z-10" aria-label="Add to Wishlist">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+            <div class="w-32 h-32 rounded-full bg-[#F43F5E]/10 border border-[#F43F5E]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-16 h-16 text-[#F43F5E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#94A3B8] mb-1.5">
+                <span class="text-[#10B981] font-semibold">★ 4.9 (420 reviews)</span><span>•</span><span>Age 8+</span>
+              </div>
+              <a href="product.html" class="block font-bold text-base text-[#F8FAFC] hover:text-[#06B6D4] transition-colors">Dragon Knight Figurine</a>
+              <p class="text-xs text-[#94A3B8] mt-1 line-clamp-2">Our flagship articulated knight with magnetic wings and removable crest.</p>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <span class="text-xl font-black text-[#F8FAFC]">$24.99</span>
+              <button class="add-to-bag-btn bg-[#06B6D4] text-[#F8FAFC] text-xs font-bold px-4 py-2 rounded-xl hover:bg-[#0891B2] transition-colors" data-slug="dragon-knight" data-title="Dragon Knight Figurine" data-price="24.99">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Cosmic Rocket -->
+        <div class="bg-[#1E293B] rounded-2xl border border-white/5 overflow-hidden shadow-lg flex flex-col group hover:border-[#06B6D4]/40 transition-colors">
+          <div class="relative h-60 bg-[#0F172A] flex items-center justify-center p-6 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#06B6D4] text-[#F8FAFC] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10">TOP RATED</span>
+            <button class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-[#1E293B]/80 text-[#94A3B8] hover:text-[#F43F5E] flex items-center justify-center transition-colors z-10" aria-label="Add to Wishlist">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+            <div class="w-32 h-32 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-16 h-16 text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1M4.22 4.22l.707.707M18.364 18.364l.707.707M1 12h1m20 0h1M4.22 19.778l.707-.707M18.364 5.636l.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#94A3B8] mb-1.5">
+                <span class="text-[#10B981] font-semibold">★ 5.0 (310 reviews)</span><span>•</span><span>Age 6+</span>
+              </div>
+              <a href="product.html" class="block font-bold text-base text-[#F8FAFC] hover:text-[#06B6D4] transition-colors">Cosmic Rocket Playset</a>
+              <p class="text-xs text-[#94A3B8] mt-1 line-clamp-2">Blast-off stages, detachable boosters, and opening pilot capsule.</p>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <span class="text-xl font-black text-[#F8FAFC]">$34.99</span>
+              <button class="add-to-bag-btn bg-[#06B6D4] text-[#F8FAFC] text-xs font-bold px-4 py-2 rounded-xl hover:bg-[#0891B2] transition-colors" data-slug="cosmic-rocket-playset" data-title="Cosmic Rocket Playset" data-price="34.99">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Galaxy Battle Station -->
+        <div class="bg-[#1E293B] rounded-2xl border border-white/5 overflow-hidden shadow-lg flex flex-col group hover:border-[#10B981]/40 transition-colors">
+          <div class="relative h-60 bg-[#0F172A] flex items-center justify-center p-6 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-[#10B981] text-[#F8FAFC] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full z-10">FLAGSHIP</span>
+            <button class="wishlist-btn absolute top-3 right-3 w-8 h-8 rounded-full bg-[#1E293B]/80 text-[#94A3B8] hover:text-[#F43F5E] flex items-center justify-center transition-colors z-10" aria-label="Add to Wishlist">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+            <div class="w-32 h-32 rounded-full bg-[#10B981]/10 border border-[#10B981]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-16 h-16 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#94A3B8] mb-1.5">
+                <span class="text-[#10B981] font-semibold">★ 4.9 (185 reviews)</span><span>•</span><span>Age 8+</span>
+              </div>
+              <a href="product.html" class="block font-bold text-base text-[#F8FAFC] hover:text-[#06B6D4] transition-colors">Galaxy Battle Station</a>
+              <p class="text-xs text-[#94A3B8] mt-1 line-clamp-2">Complete 215-piece command center with fighter launch tubes.</p>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-white/5">
+              <span class="text-xl font-black text-[#F8FAFC]">$59.99</span>
+              <button class="add-to-bag-btn bg-[#06B6D4] text-[#F8FAFC] text-xs font-bold px-4 py-2 rounded-xl hover:bg-[#0891B2] transition-colors" data-slug="galaxy-battle-station" data-title="Galaxy Battle Station" data-price="59.99">
+                Add to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 bg-[#1E293B] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+
+        <!-- Col 1: Brand Info -->
+        <div class="space-y-5 lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 group">
+            <img src="assets/images/logo.jpg" alt="WigglePrinted Logo" class="w-10 h-10 rounded-full object-cover border border-[#06B6D4]/30 shadow-md">
+            <span class="text-xl font-extrabold text-[#F8FAFC]">Wiggle<span class="text-[#06B6D4]">Printed</span></span>
+          </a>
+          <p class="text-sm text-[#94A3B8] leading-relaxed max-w-sm">
+            Precision 3D-pritned toys for bold imaginations. We craft every product we craft is driven by a passion for learning
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.tiktok.com/@wiggleprinted2026" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-[#0F172A] border border-white/5 flex items-center justify-center text-[#94A3B8] hover:text-[#06B6D4] hover:border-[#06B6D4]/30 transition-colors" aria-label="TikTok">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.18 8.18 0 004.78 1.52V6.81a4.85 4.85 0 01-1.01-.12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop Links -->
+        <div>
+          <h4 class="text-sm font-bold text-[#F8FAFC] mb-5 tracking-wide uppercase">Shop</h4>
+          <ul class="space-y-3">
+            <li><a href="category.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">All Products</a></li>
+            <li><a href="new-arrivals.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">New Arrivals</a></li>
+            <li><a href="best-sellers.html" class="text-sm text-[#06B6D4] font-semibold transition-colors">Best Sellers</a></li>
+            <li><a href="gift-sets.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">Gift Sets</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div>
+          <h4 class="text-sm font-bold text-[#F8FAFC] mb-5 tracking-wide uppercase">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support -->
+        <div>
+          <h4 class="text-sm font-bold text-[#F8FAFC] mb-5 tracking-wide uppercase">Support</h4>
+          <ul class="space-y-3">
+            <li><a href="returns.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">Returns &amp; Exchange</a></li>
+            <li><a href="contact.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-14 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#94A3B8]">
+        <p>&copy; 2025 WigglePrinted Inc. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="privacy.html" class="hover:text-[#F8FAFC] transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-[#F8FAFC] transition-colors">Terms of Service</a>
+          <a href="admin/index.html" class="hover:text-[#06B6D4] transition-colors">Decap CMS Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

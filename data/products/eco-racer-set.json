@@ -1,0 +1,12 @@
+{
+  "title": "Eco Racer Set",
+  "price": 29.99,
+  "slug": "eco-racer-set",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["Sale"],
+  "category": "Speed Machines",
+  "specs": { "age": "5+", "pieces": 34 },
+  "description": "Three sleek pull-back race cars printed in bright eco-safe PLA. Includes a fold-flat racetrack connector system.",
+  "checkout_link": "product.html"
+}

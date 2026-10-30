@@ -1,0 +1,12 @@
+{
+  "title": "3D Puzzle Castle",
+  "price": 44.99,
+  "slug": "puzzle-castle",
+  "featured_image": "",
+  "gallery": [],
+  "badges": [],
+  "category": "Puzzles & Games",
+  "specs": { "age": "9+", "pieces": 98 },
+  "description": "A challenging 3D interlocking castle puzzle with towers, a drawbridge, and hidden rooms. Assembles without glue or tools.",
+  "checkout_link": "product.html"
+}

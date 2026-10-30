@@ -1,0 +1,12 @@
+{
+  "title": "Space Explorer STEM Kit",
+  "price": 49.99,
+  "slug": "space-explorer-kit",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["New", "Sale"],
+  "category": "STEM Builders",
+  "specs": { "age": "10+", "pieces": 127 },
+  "description": "A comprehensive STEM kit including a working orrery, telescope model, and planetary scale chart. Perfect for budding astronomers and engineers.",
+  "checkout_link": "product.html"
+}

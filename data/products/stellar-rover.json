@@ -1,0 +1,12 @@
+{
+  "title": "Stellar Rover Vehicle",
+  "price": 39.99,
+  "slug": "stellar-rover",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["New"],
+  "category": "Speed Machines",
+  "specs": { "age": "7+", "pieces": 56 },
+  "description": "A Mars-inspired six-wheeled rover with poseable articulated suspension, solar panel wings that fold, and a rotating camera arm.",
+  "checkout_link": "product.html"
+}

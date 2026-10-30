@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — WigglePrinted</title>
+  <meta name="description" content="Get in touch with the WigglePrinted team. We're here to answer questions about our 3D printed toys, custom orders, or support.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas:   '#0F172A',
+            surface:  '#1E293B',
+            offwhite: '#F8FAFC',
+            muted:    '#94A3B8',
+            cyan:     '#06B6D4',
+            coral:    '#F43F5E',
+            mint:     '#10B981',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .scrollbar-hide { scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+    .mega-menu { display: none; }
+    .group:hover .mega-menu, .mega-menu:hover { display: flex; }
+
+    .simple-dropdown { display: none; }
+    .nav-item:hover .simple-dropdown, .simple-dropdown:hover { display: block; }
+  </style>
+</head>
+<body class="bg-[#0F172A] font-sans text-[#F8FAFC] antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-[#1E293B] border-b border-white/5 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0 group">
+          <img src="assets/images/logo.jpg" alt="WigglePrinted Logo" class="w-10 h-10 rounded-full object-cover border border-[#06B6D4]/30 shadow-md group-hover:scale-105 transition-transform">
+          <span class="text-xl font-extrabold tracking-tight text-[#F8FAFC]">
+            Wiggle<span class="text-[#06B6D4]">Printed</span>
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <!-- Shop Mega Menu -->
+          <div class="group relative py-2">
+            <a href="category.html" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[#94A3B8] hover:text-[#06B6D4] transition-colors rounded-lg hover:bg-white/5">
+              Shop
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+
+            <div class="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[640px] z-50">
+              <div class="rounded-2xl bg-[#1E293B] border border-white/10 shadow-2xl overflow-hidden flex">
+                <div class="w-56 py-4 border-r border-white/5 flex flex-col bg-[#1E293B]">
+                  <p class="px-4 mb-2 text-[10px] font-bold tracking-widest text-[#94A3B8] uppercase">Categories</p>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Action Figures</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Puzzles &amp; Games</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Vehicles</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Building Sets</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Educational</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="category.html" class="flex items-center justify-between px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link">
+                    <span>Miniatures</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="gift-sets.html" class="flex items-center justify-between px-4 py-2 text-sm font-semibold text-[#06B6D4] hover:bg-[#06B6D4]/5 transition-colors group/link mt-auto border-t border-white/5">
+                    <span>🎁 Gift Sets</span>
+                    <svg class="w-3.5 h-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+
+                <div class="flex-1 bg-[#0F172A] p-5 flex flex-col">
+                  <p class="mb-4 text-[10px] font-bold tracking-widest text-[#94A3B8] uppercase">Featured Collections</p>
+                  <div class="grid grid-cols-3 gap-3 flex-1">
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#06B6D4]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1M4.22 4.22l.707.707M18.364 18.364l.707.707M1 12h1m20 0h1M4.22 19.778l.707-.707M18.364 5.636l.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#06B6D4] transition-colors text-center">Space Heroes</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#F43F5E]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#F43F5E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#F43F5E] transition-colors text-center">Fantasy Knights</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#10B981]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#10B981] transition-colors text-center">Articulated</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#94A3B8]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#F8FAFC] transition-colors text-center">Speed Machines</span>
+                    </a>
+                    <a href="category.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#06B6D4]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#06B6D4] transition-colors text-center">World Sets</span>
+                    </a>
+                    <a href="gift-sets.html" class="flex flex-col items-center gap-2 cursor-pointer group/col">
+                      <div class="w-[72px] h-[72px] rounded-full bg-[#1E293B] border border-white/5 flex items-center justify-center group-hover/col:border-[#F43F5E]/40 transition-colors">
+                        <svg class="w-8 h-8 text-[#F43F5E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                      </div>
+                      <span class="text-[11px] text-[#94A3B8] group-hover/col:text-[#F43F5E] transition-colors text-center">Gift Sets</span>
+                    </a>
+                  </div>
+
+                  <div class="mt-4 pt-4 border-t border-white/5 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-[#10B981] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-xs text-[#94A3B8]">Free shipping on orders over <span class="text-[#F8FAFC] font-semibold">$50</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discover -->
+          <div class="nav-item relative py-2">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[#94A3B8] hover:text-[#F8FAFC] transition-colors rounded-lg hover:bg-white/5">
+              Discover
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="simple-dropdown absolute top-full left-0 pt-2 w-48 z-50">
+              <div class="rounded-xl bg-[#1E293B] border border-white/10 shadow-xl py-2">
+                <a href="new-arrivals.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">New Arrivals</a>
+                <a href="best-sellers.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">Best Sellers</a>
+                <a href="gift-sets.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">Gift Sets</a>
+                <div class="border-t border-white/5 my-1"></div>
+                <a href="about.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors">About Us</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Help -->
+          <div class="nav-item relative py-2">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[#06B6D4] transition-colors rounded-lg hover:bg-white/5">
+              Help
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="simple-dropdown absolute top-full left-0 pt-2 w-52 z-50">
+              <div class="rounded-xl bg-[#1E293B] border border-white/10 shadow-xl py-2">
+                <a href="returns.html" class="block px-4 py-2 text-sm text-[#94A3B8] hover:text-[#06B6D4] hover:bg-white/5 transition-colors">Returns &amp; Exchange</a>
+                <a href="contact.html" class="block px-4 py-2 text-sm text-[#06B6D4] font-semibold bg-white/5 transition-colors">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Icons -->
+        <div class="flex items-center gap-1.5">
+          <a href="contact.html" class="p-2 rounded-lg text-[#06B6D4] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors" aria-label="Support">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </a>
+          <button class="relative p-2 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors" aria-label="Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cart-count absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#F43F5E] text-[#F8FAFC] text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/5 transition-colors" aria-label="Menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/5 bg-[#1E293B]">
+      <div class="px-4 py-4 space-y-3">
+        <div class="space-y-1">
+          <a href="category.html" class="block px-3 py-2 text-sm font-semibold text-[#06B6D4] bg-white/5 rounded-lg">Shop All Toys</a>
+          <a href="new-arrivals.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">New Arrivals</a>
+          <a href="best-sellers.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">Best Sellers</a>
+          <a href="gift-sets.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">Gift Sets</a>
+          <a href="about.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">About Us</a>
+          <a href="returns.html" class="block px-3 py-2 text-sm text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-colors">Returns &amp; Exchange</a>
+          <a href="contact.html" class="block px-3 py-2 text-sm text-[#06B6D4] font-semibold bg-white/5 rounded-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1">
+    <!-- Banner -->
+    <section class="relative bg-gradient-to-b from-[#1E293B] to-[#0F172A] py-16 sm:py-20 border-b border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/30 text-xs font-semibold text-[#06B6D4]">
+          Customer Care &amp; Custom Requests
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-black text-[#F8FAFC] tracking-tight">
+          We'd Love to Hear <span class="text-[#06B6D4]">From You</span>
+        </h1>
+        <p class="text-base sm:text-lg text-[#94A3B8] max-w-xl mx-auto leading-relaxed">
+          Have a question about a model, custom color prints, or order status? Send us a message and our studio team will get back to you promptly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        
+        <!-- Info Column -->
+        <div class="space-y-6">
+          <div class="bg-[#1E293B] p-6 rounded-3xl border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-[#06B6D4]/10 border border-[#06B6D4]/30 flex items-center justify-center text-[#06B6D4]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h2 class="font-bold text-[#F8FAFC] text-base">Direct Email</h2>
+            <p class="text-xs text-[#94A3B8]">For orders, questions, and maker collaborations:</p>
+            <a href="mailto:support@wiggleprinted.com" class="text-sm font-semibold text-[#06B6D4] hover:underline block">support@wiggleprinted.com</a>
+          </div>
+
+          <div class="bg-[#1E293B] p-6 rounded-3xl border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/30 flex items-center justify-center text-[#10B981]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h2 class="font-bold text-[#F8FAFC] text-base">Studio Hours</h2>
+            <p class="text-xs text-[#94A3B8]">Print farm operates 24/7. Customer care hours:</p>
+            <p class="text-xs text-[#F8FAFC] font-medium">Monday – Saturday: 8:00 AM – 6:00 PM PST</p>
+          </div>
+
+          <div class="bg-[#1E293B] p-6 rounded-3xl border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-[#F43F5E]/10 border border-[#F43F5E]/30 flex items-center justify-center text-[#F43F5E]">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.18 8.18 0 004.78 1.52V6.81a4.85 4.85 0 01-1.01-.12z"/></svg>
+            </div>
+            <h2 class="font-bold text-[#F8FAFC] text-base">Watch Prints Live</h2>
+            <p class="text-xs text-[#94A3B8]">Follow our behind-the-scenes print timelapse videos:</p>
+            <a href="https://www.tiktok.com/@wiggleprinted2026" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#06B6D4] hover:underline block">
+              @wiggleprinted2026 on TikTok &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="lg:col-span-2 bg-[#1E293B] p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl space-y-6">
+          <div class="space-y-1">
+            <h2 class="text-2xl font-bold text-[#F8FAFC]">Send a Message</h2>
+            <p class="text-xs text-[#94A3B8]">Fill out the form below and we will get back to you within 24 hours.</p>
+          </div>
+
+          <form id="contact-form" class="space-y-5" onsubmit="event.preventDefault(); document.getElementById('contact-success').classList.remove('hidden'); this.reset();">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">Your Name</label>
+                <input type="text" required placeholder="Alex Maker" class="w-full bg-[#0F172A] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#06B6D4]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">Email Address</label>
+                <input type="email" required placeholder="alex@example.com" class="w-full bg-[#0F172A] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#06B6D4]">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">Order # (Optional)</label>
+                <input type="text" placeholder="WP-12345" class="w-full bg-[#0F172A] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#06B6D4]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">Topic</label>
+                <select class="w-full bg-[#0F172A] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-[#F8FAFC] focus:outline-none focus:border-[#06B6D4]">
+                  <option>Order Inquiry</option>
+                  <option>Custom Toy / Color Request</option>
+                  <option>Replacement Part Request</option>
+                  <option>General Feedback</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-[#94A3B8] uppercase mb-1">Message</label>
+              <textarea required rows="4" placeholder="How can our workshop help you?" class="w-full bg-[#0F172A] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#94A3B8]/50 focus:outline-none focus:border-[#06B6D4] resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="bg-[#06B6D4] text-[#F8FAFC] font-bold px-8 py-3 rounded-xl hover:bg-[#0891B2] transition-colors shadow-lg shadow-[#06B6D4]/20">
+              Send Message
+            </button>
+          </form>
+
+          <div id="contact-success" class="hidden p-4 rounded-xl bg-[#10B981]/10 border border-[#10B981]/30 text-xs text-[#10B981]">
+            🚀 Thank you! Your message has been received. Our studio team will reach out to you within 24 hours.
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 bg-[#1E293B] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+
+        <!-- Col 1: Brand Info -->
+        <div class="space-y-5 lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 group">
+            <img src="assets/images/logo.jpg" alt="WigglePrinted Logo" class="w-10 h-10 rounded-full object-cover border border-[#06B6D4]/30 shadow-md">
+            <span class="text-xl font-extrabold text-[#F8FAFC]">Wiggle<span class="text-[#06B6D4]">Printed</span></span>
+          </a>
+          <p class="text-sm text-[#94A3B8] leading-relaxed max-w-sm">
+            Precision 3D-pritned toys for bold imaginations. We craft every product we craft is driven by a passion for learning
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.tiktok.com/@wiggleprinted2026" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-[#0F172A] border border-white/5 flex items-center justify-center text-[#94A3B8] hover:text-[#06B6D4] hover:border-[#06B6D4]/30 transition-colors" aria-label="TikTok">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.18 8.18 0 004.78 1.52V6.81a4.85 4.85 0 01-1.01-.12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop Links -->
+        <div>
+          <h4 class="text-sm font-bold text-[#F8FAFC] mb-5 tracking-wide uppercase">Shop</h4>
+          <ul class="space-y-3">
+            <li><a href="category.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">All Products</a></li>
+            <li><a href="new-arrivals.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">New Arrivals</a></li>
+            <li><a href="best-sellers.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">Best Sellers</a></li>
+            <li><a href="gift-sets.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">Gift Sets</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div>
+          <h4 class="text-sm font-bold text-[#F8FAFC] mb-5 tracking-wide uppercase">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support -->
+        <div>
+          <h4 class="text-sm font-bold text-[#F8FAFC] mb-5 tracking-wide uppercase">Support</h4>
+          <ul class="space-y-3">
+            <li><a href="returns.html" class="text-sm text-[#94A3B8] hover:text-[#06B6D4] transition-colors">Returns &amp; Exchange</a></li>
+            <li><a href="contact.html" class="text-sm text-[#06B6D4] font-semibold transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-14 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#94A3B8]">
+        <p>&copy; 2025 WigglePrinted Inc. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="privacy.html" class="hover:text-[#F8FAFC] transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-[#F8FAFC] transition-colors">Terms of Service</a>
+          <a href="admin/index.html" class="hover:text-[#06B6D4] transition-colors">Decap CMS Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

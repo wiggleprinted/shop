@@ -1,0 +1,12 @@
+{
+  "title": "Mini Dino Collector Pack",
+  "price": 19.99,
+  "slug": "mini-dino-pack",
+  "featured_image": "",
+  "gallery": [],
+  "badges": ["Sale"],
+  "category": "Action Figures",
+  "specs": { "age": "4+", "pieces": 8 },
+  "description": "Eight adorable miniature dinosaur figurines printed with ultra-high detail. Includes T-Rex, Triceratops, Brachiosaurus and five more prehistoric favourites.",
+  "checkout_link": "product.html"
+}
