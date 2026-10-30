@@ -17,104 +17,14 @@ const COLORS = {
   mint:    '#10B981',
 };
 
-// ─── STATIC FALLBACK DATA ───────────────────────────────────────────────────────
-const FALLBACK_PRODUCTS = [
-  {
-    title: 'Cosmic Rocket Playset',
-    price: 34.99,
-    slug: 'cosmic-rocket-playset',
-    featured_image: '',
-    badges: ['New'],
-    category: 'Space Heroes',
-    specs: { age: '6+', pieces: 42 },
-    description: 'Blast off into imagination with our precision 3D-printed rocket set.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: 'Dragon Knight Figurine',
-    price: 24.99,
-    slug: 'dragon-knight-figurine',
-    featured_image: '',
-    badges: ['Best Seller'],
-    category: 'Fantasy Knights',
-    specs: { age: '8+', pieces: 18 },
-    description: 'A majestic 3D-printed Dragon Knight with articulated arms and removable armour.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: 'Space Explorer STEM Kit',
-    price: 49.99,
-    slug: 'space-explorer-kit',
-    featured_image: '',
-    badges: ['New', 'Sale'],
-    category: 'STEM Builders',
-    specs: { age: '10+', pieces: 127 },
-    description: 'A comprehensive STEM kit including a working orrery, telescope model, and more.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: 'Mini Dino Collector Pack',
-    price: 19.99,
-    slug: 'mini-dino-pack',
-    featured_image: '',
-    badges: ['Sale'],
-    category: 'Action Figures',
-    specs: { age: '4+', pieces: 8 },
-    description: 'Eight adorable miniature dinosaur figurines printed with ultra-high detail.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: 'Stellar Rover Vehicle',
-    price: 39.99,
-    slug: 'stellar-rover',
-    featured_image: '',
-    badges: ['New'],
-    category: 'Speed Machines',
-    specs: { age: '7+', pieces: 56 },
-    description: 'A Mars-inspired six-wheeled rover with poseable articulated suspension.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: '3D Puzzle Castle',
-    price: 44.99,
-    slug: 'puzzle-castle',
-    featured_image: '',
-    badges: [],
-    category: 'Puzzles & Games',
-    specs: { age: '9+', pieces: 98 },
-    description: 'A challenging 3D interlocking castle puzzle — no glue or tools required.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: 'Galaxy Battle Station',
-    price: 59.99,
-    slug: 'galaxy-battle-station',
-    featured_image: '',
-    badges: ['New', 'Best Seller'],
-    category: 'Space Heroes',
-    specs: { age: '8+', pieces: 215 },
-    description: 'The ultimate space command centre with docking bays and fighter launch tubes.',
-    checkout_link: 'product.html',
-  },
-  {
-    title: 'Eco Racer Set',
-    price: 29.99,
-    slug: 'eco-racer-set',
-    featured_image: '',
-    badges: ['Sale'],
-    category: 'Speed Machines',
-    specs: { age: '5+', pieces: 34 },
-    description: 'Three sleek pull-back race cars with fold-flat racetrack connector system.',
-    checkout_link: 'product.html',
-  },
-];
+// ─── NO FALLBACK DATA — all products come from the CMS (data/products/*.json) ───
 
 // ─── DATA FETCHING ──────────────────────────────────────────────────────────────
 
 /**
  * Fetches all products. Reads data/products/index.json for slugs,
  * then fetches each individual JSON file.
- * Falls back to static FALLBACK_PRODUCTS on any network error.
+ * Returns an empty array if the fetch fails — no hardcoded fallback.
  */
 async function fetchProducts() {
   try {
@@ -135,10 +45,10 @@ async function fetchProducts() {
       .filter(r => r.status === 'fulfilled')
       .map(r => r.value);
 
-    return loaded.length > 0 ? loaded : FALLBACK_PRODUCTS;
+    return loaded;
   } catch (err) {
-    console.info('[WigglePrinted] Using static product data.', err.message);
-    return FALLBACK_PRODUCTS;
+    console.warn('[WigglePrinted] Could not load products from CMS.', err.message);
+    return [];
   }
 }
 
@@ -537,6 +447,47 @@ document.addEventListener('click', e => {
 
 // ─── MAIN INIT ──────────────────────────────────────────────────────────────────
 
+/**
+ * Renders a full-page product grid into a container element.
+ * Shows a "no products" message if the filtered list is empty.
+ * @param {HTMLElement} container
+ * @param {Object[]} products
+ */
+function renderProductGrid(container, products) {
+  if (!products.length) {
+    container.innerHTML = `
+      <div class="col-span-full flex flex-col items-center justify-center py-24 gap-4 text-center">
+        <svg class="w-14 h-14 text-[#94A3B8]/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+        </svg>
+        <p class="text-[#94A3B8] text-sm">No products found. Check back soon!</p>
+      </div>`;
+    return;
+  }
+  container.innerHTML = products.map(p => generateProductCard(p, 'grid')).join('');
+}
+
+async function initBestSellersGrid() {
+  const grid = document.getElementById('best-sellers-grid');
+  if (!grid) return;
+  const products = await getProducts();
+  // Best sellers = products with 'Best Seller' badge
+  const bestSellers = products.filter(p => p.badges?.includes('Best Seller'));
+  // If none are tagged, show all products rather than an empty page
+  renderProductGrid(grid, bestSellers.length ? bestSellers : products);
+}
+
+async function initNewArrivalsGrid() {
+  const grid = document.getElementById('new-arrivals-grid');
+  if (!grid) return;
+  const products = await getProducts();
+  // New arrivals = products with 'New' badge
+  const newArrivals = products.filter(p => p.badges?.includes('New'));
+  renderProductGrid(grid, newArrivals.length ? newArrivals : products);
+}
+
+// ─── MAIN INIT ──────────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   updateCartBadges();
@@ -557,6 +508,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('main-product-image')) {
     initThumbnails();
     initQuantitySelector();
+  }
+
+  // Best sellers page
+  if (document.getElementById('best-sellers-grid')) {
+    initBestSellersGrid();
+  }
+
+  // New arrivals page
+  if (document.getElementById('new-arrivals-grid')) {
+    initNewArrivalsGrid();
   }
 
   // All pages
