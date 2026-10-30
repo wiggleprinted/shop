@@ -1,12 +1,20 @@
 {
-  "title": "Cosmic Rocket Playset",
-  "price": 34.99,
-  "slug": "cosmic-rocket-playset",
-  "featured_image": "",
-  "gallery": [],
-  "badges": ["New"],
-  "category": "Space Heroes",
-  "specs": { "age": "6+", "pieces": 42 },
+  "price": 9.99,
+  "featured_image": "/assets/images/uploads/img_1560.jpeg",
+  "slug": "3d-printed-doggy",
+  "badges": [
+    "New"
+  ],
+  "gallery": [
+    "/assets/images/uploads/img_1559.jpeg",
+    "/assets/images/uploads/img_1561.jpeg"
+  ],
+  "checkout_link": "product.html",
+  "specs": {
+    "age": "6+",
+    "pieces": 42
+  },
+  "title": "My 3d printed Doggy",
   "description": "Blast off into imagination with our precision 3D-printed rocket set. Features detachable fuel boosters, opening crew hatch, and a detailed cockpit interior. Printed in eco-friendly PLA filament.",
-  "checkout_link": "product.html"
+  "category": "Space Heroes"
 }
